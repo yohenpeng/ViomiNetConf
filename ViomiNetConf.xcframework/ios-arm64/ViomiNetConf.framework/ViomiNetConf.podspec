@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ViomiNetConf"
-  spec.version      = "13"
+  spec.version      = "14"
   spec.summary      = "云米iOS ViomiNetConf SDK"
   spec.description  = <<-DESC
   云米iOS ViomiNetConf SDK
@@ -10,7 +10,17 @@ Pod::Spec.new do |spec|
   spec.author             = { "彭依汉" => "pengyihan@viomi.com.cn" }
   spec.ios.deployment_target = "10.0"
   spec.source       = { :git => "https://gitlab.viomi.com.cn/app/iOS/component/viomi_netconf_ios.git", :tag => "#{spec.version}" }
-  spec.vendored_framework  = "ViomiNetConf_Products/ViomiNetConf.xcframework"
+  
+  spec.default_subspec = 'Framework'
+  spec.subspec 'Framework' do |ss|
+      ss.vendored_framework  = "ViomiNetConf_Products/ViomiNetConf.xcframework"
+  end
+  
+  spec.subspec 'Source' do |ss|
+      ss.source_files = "ViomiNetConf/*.{h,m}","ViomiNetConf/*/*.{h,m}","ViomiNetConf/*/*/*.{h,m}","ViomiNetConf/*/*/*/*.{h,m}","ViomiNetConf/*/*/*/*/*.{h,m}","ViomiNetConf/*/*/*/*/*/*.{h,m}"
+  end
+  
+  
   spec.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   spec.pod_target_xcconfig = {'DEFINES_MODULE' => 'YES'}
   spec.libraries = "iconv"

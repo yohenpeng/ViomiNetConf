@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ViomiNetConf"
-  spec.version      = "1.0"
+  spec.version      = "1.0.1"
   spec.summary      = "云米iOS ViomiNetConf SDK"
   spec.description  = <<-DESC
   云米iOS ViomiNetConf SDK
