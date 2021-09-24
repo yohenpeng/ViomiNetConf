@@ -1,0 +1,6 @@
+framework module ViomiNetConf {
+  umbrella header "ViomiNetConf.h"
+
+  export *
+  module * { export * }
+}
