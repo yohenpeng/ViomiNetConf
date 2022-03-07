@@ -1,15 +1,15 @@
 Pod::Spec.new do |spec|
   spec.name         = "ViomiNetConf"
-  spec.version      = "14"
+  spec.version      = "18"
   spec.summary      = "云米iOS ViomiNetConf SDK"
   spec.description  = <<-DESC
   云米iOS ViomiNetConf SDK
                    DESC
-  spec.homepage     = "https://gitlab.viomi.com.cn/app/iOS/component/viomi_netconf_ios"
+  spec.homepage     = "https://gitlab.viomi.net/app/iOS/component/viomi_netconf_ios"
   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   spec.author             = { "彭依汉" => "pengyihan@viomi.com.cn" }
   spec.ios.deployment_target = "10.0"
-  spec.source       = { :git => "https://gitlab.viomi.com.cn/app/iOS/component/viomi_netconf_ios.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://gitlab.viomi.net/app/iOS/component/viomi_netconf_ios.git", :tag => "#{spec.version}" }
   
   spec.default_subspec = 'Framework'
   spec.subspec 'Framework' do |ss|
